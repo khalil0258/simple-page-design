@@ -1,0 +1,301 @@
+  *{
+  	font-family:  'Poppins', sans-serif;
+  	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
+  	text-transform: capitalize;
+  }
+
+  /*typography*/
+p{
+	line-height: 1.8;
+	font-weight: 300;
+	font-size: 1.25rem;
+	color: #949494;
+}
+h2{
+	font-weight: 600;
+	font-size: 2rem;
+	color: #2b2b2b
+		text-transform: uppercase;
+}
+h3{
+	font-weight: 400;
+	font-size: 1.25rem;
+	color: #2b2b2b;
+	text-transform: uppercase;
+
+}
+h1{
+	font-weight: 700;
+	font-size: 8rem;
+	color: #e3e3e3;
+	text-transform: uppercase;
+
+}body{
+	scroll-behavior: smooth;
+	overflow-x:  hidden;
+}
+img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.container{
+	width: 90%;
+	max-width: 1070px;
+	margin: 0 auto;
+}
+/*header section*/
+.header{ 
+
+	width: 100%;
+	height: 100vh;
+	background-image: url('../image/1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 2em 0;
+}
+.header h2{
+	color: #fff;
+}
+.menu-btn{
+	width: 25px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: none;
+}
+.header .header-nav{
+width: 100%;
+padding: 1em 0;
+display: flex;
+justify-content: space-between;	
+}
+.close-btn{
+	width: 20px;
+	height: 20px;
+	display: none;
+}
+.header-nav ul{
+	display: flex;
+
+}
+.header-nav li{
+	margin:0 30px;
+	list-style: none;
+}
+.header-nav a{
+	text-decoration: none;
+	color:#e3e3e3;
+}
+.btn{
+	border:1px solid #e3e3e3;
+	padding: 5px 20px ;
+	border-radius: 10px
+}
+.head{
+	width: 100%;
+	
+	text-align: center;
+    margin-top: 20vh;
+}
+
+.head h2{
+	position: relative;
+	bottom: 30px;
+}
+.head h2::after{
+	content: '';
+	position: absolute;
+	top: 60px;
+	right: 46%;
+	width: 80px;
+	height: 3px;
+	background: #e3e3e3;
+}
+
+
+/*section place*/
+.latest{
+	width: 100%;
+	padding: 100px 0;
+	background-color: #d6d6d4;
+	text-align: center;
+    
+}
+.latest h2{
+	margin-bottom: 50px;
+}
+.latest-row{
+	width: 100%;
+	display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.latest-row .latest-col{
+	text-align: center;
+    width: 310px;
+	height: 500px;
+	margin: 40px 0;
+	box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.latest-row .latest-col>div{
+	height: 50%;
+	width: 100%;
+
+}
+.latest-col-desc{
+	padding: 25px 10px;
+	overflow: hidden;
+}
+
+/*about section*/
+.about{ overflow: hidden;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+
+}
+.about >div{
+   height: 100%;
+   width: 50%;
+
+}
+.about .about-desc{
+	
+	padding: 100px 30px;
+	text-align: center;	
+}
+
+.about-desc p {
+	margin-top: 30px;
+	text-align: left;
+}
+/*media place*/
+
+
+
+@media  (max-width: 767px){
+	h1{
+		font-size: 5rem;
+	}
+	h2{
+		font-size: 1.5rem;
+	}
+	.menu-btn{
+	cursor: pointer;
+	display: block;
+}
+
+.header .header-nav{
+width: 250px;
+padding: 1em ;
+min-height: 100vh;
+background: gray;
+position: absolute;
+right: -300px;
+top: 0;
+overflow: hidden;
+flex-direction: column;
+justify-content: flex-start;
+transition: .5s ease-in-out;
+z-index: 3;	
+
+}
+.close-btn{
+	cursor: pointer;
+	display: block;
+}
+.head{
+	
+    margin-top: 30vh;
+}
+.head h2{
+	position: relative;
+	bottom: 20px;
+}
+.head h2::after{
+	
+	display: none;
+}
+.header-nav ul{width: 100%;
+	margin-top: 40px;
+	flex-direction: column; 
+	height: 160px;
+	justify-content: space-between;
+
+}
+ .header-nav li{
+ 	cursor: pointer;
+ 	padding: 10px;
+	margin:0 ;
+	width: 100%;
+	border:1px solid #fff;
+	transition: .3s ease-in-out;
+}
+ .header-nav li:hover{
+ 	background-color: #fff;
+ 	color: grey;
+ 	font-weight: bold;
+ }
+.header-nav h2{
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	
+}
+.btn{
+	border:none;
+}
+/*latest articles section*/
+
+.latest-row .latest-col{
+	margin-bottom:25px;
+   width: 46%;
+}
+/*about section*/
+.about{ 
+	flex-direction: column;
+	justify-content: flex-start;
+padding: 100px 50px;
+   height: auto;
+}
+.about >div{
+ 
+   width: 100%;
+
+}
+.about .about-img{
+	height: 40vh;
+}
+.about .about-desc{
+
+height: 100vh;
+}
+.about-desc p{
+	text-align: center;
+}
+
+/*small medias*/
+
+@media  (max-width: 557px){
+
+.latest-row{
+	flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+	.latest-row .latest-col{
+	margin-bottom:25px;
+    width: 80%;
+}
+}
